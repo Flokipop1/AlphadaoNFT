@@ -1,0 +1,20 @@
+{
+  "name": "CertificationNFT",
+  "methods": [
+    {
+      "name": "mint",
+      "op": 1,
+      "inputs": [
+        "recipient: address",
+        "metadata: cell"
+      ]
+    },
+    {
+      "name": "add_admin",
+      "op": 2,
+      "inputs": [
+        "admin_address: address"
+      ]
+    }
+  ]
+}

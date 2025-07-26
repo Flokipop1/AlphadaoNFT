@@ -1,0 +1,35 @@
+{
+  "name": "alphdao_nft",
+  "version": "1.0.0",
+  "description": "Soulbound certification NFT using FunC",
+  "main": "index.js",
+  "type": "commonjs",
+  "directories": {
+    "test": "jest"
+  },
+  "scripts": {
+    "build": "blueprint build",
+    "test": "blueprint test",
+    "test:watch": "blueprint test --watch",
+    "compile": "ts-node scripts/compile.ts",
+    "deploy": "npx blueprint run deploy.local"
+  },
+  "keywords": [
+    "ton",
+    "nft",
+    "func",
+    "blueprint",
+    "soulbond"
+  ],
+  "author": "Floki",
+  "license": "MIT",
+  "devDependencies": {
+    "@ton/blueprint": "^0.38.0",
+    "@ton/test-utils": "^0.9.0",
+    "@types/jest": "^30.0.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}

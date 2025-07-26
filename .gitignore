@@ -1,0 +1,24 @@
+# Ignore dependencies
+node_modules/
+
+# Build artifacts
+.build/
+dist/
+out/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Environment files
+.env
+
+# Logs
+*.log
+
+# Editor settings
+.vscode/
+.idea/
+.DS_Store
+
+# Jest coverage
+coverage/
