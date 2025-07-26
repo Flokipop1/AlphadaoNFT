@@ -7,7 +7,7 @@ const OP_ADD_ADMIN = 0x01;
 const OP_MINT = 0x02;
 const MAX_SUPPLY = 500;
 
-;; Extract real sender address from internal message
+;; Extracting senders address from internal message
 slice get_sender(cell in_msg) inline {
     var cs = in_msg.begin_parse();
     cs~load_uint(1); ;; ihr_disabled
@@ -17,7 +17,7 @@ slice get_sender(cell in_msg) inline {
     return sender;
 }
 
-;; Compare addresses
+;; Compare addresses if it is authorized
 (int) addr_to_bits(slice addr) inline {
     return slice_hash(addr);
 }
@@ -34,7 +34,7 @@ slice get_sender(cell in_msg) inline {
     return 0;
 }
 
-;; Add admin helper
+;; Adding admin helper
 (cell, int) add_admin(cell admins_dict, int count, slice new_admin) inline {
     int key = addr_to_bits(new_admin);
     var updated = udict_set_ref(admins_dict, 256, key, begin_cell().store_slice(new_admin).end_cell());
